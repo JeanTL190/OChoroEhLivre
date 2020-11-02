@@ -62,7 +62,7 @@ public class MenuFunctions : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !PlayerBehavior.dead && pauseMenuUI != null)
+        if (Input.GetKeyDown(KeyCode.Escape) && pauseMenuUI != null)
         {
             if (paused)
             {
