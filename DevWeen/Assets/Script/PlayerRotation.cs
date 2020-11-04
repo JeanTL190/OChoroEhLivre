@@ -11,7 +11,7 @@ public class PlayerRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inpt = Input.GetAxisRaw(inptRotaciona);
+        inpt = Input.GetAxis(inptRotaciona);
         Rotate(this.transform, angularSpeed * inpt);
     }
     private void Rotate(Transform t, float angulo)
