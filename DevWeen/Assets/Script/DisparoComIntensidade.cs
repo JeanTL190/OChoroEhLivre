@@ -8,6 +8,7 @@ public class DisparoComIntensidade : MonoBehaviour
     [SerializeField] private float acel = 0.5f;
     [SerializeField] private float desacel = 0.1f;
     [SerializeField] private string disparo;
+    [SerializeField] private Transform transfDisp;
     private float velAtual = 1f;
     private Rigidbody2D rb;
     private bool shoot = false;
@@ -19,6 +20,8 @@ public class DisparoComIntensidade : MonoBehaviour
     {
         if (!shoot)
         {
+            this.transform.position = transfDisp.position;
+            this.transform.rotation = transfDisp.rotation;
             if (Input.GetAxisRaw(disparo) > 0)
             {
                 velAtual += (Time.deltaTime * acel);
@@ -30,7 +33,6 @@ public class DisparoComIntensidade : MonoBehaviour
                 shoot = true;
             }
         }
-        Debug.Log(velAtual);
     }
     private void FixedUpdate()
     {
@@ -45,8 +47,12 @@ public class DisparoComIntensidade : MonoBehaviour
             }
         }
     }
-    private void SetDisparo(string d)
+    public void SetDisparo(string d)
     {
         disparo = d;
+    }
+    public void SetTransfDisp(Transform t)
+    {
+        transfDisp = t;
     }
 }
