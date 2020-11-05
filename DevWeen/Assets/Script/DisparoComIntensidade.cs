@@ -7,8 +7,9 @@ public class DisparoComIntensidade : MonoBehaviour
     [SerializeField] private float maxVel = 5f;
     [SerializeField] private float acel = 0.5f;
     [SerializeField] private float desacel = 0.1f;
-    [SerializeField] private string disparo;
-    [SerializeField] private Transform transfDisp;
+    private string disparo;
+    private Transform transfDisp;
+    private SpawnWeapon spawn;
     private float velAtual = 1f;
     private Rigidbody2D rb;
     private bool shoot = false;
@@ -18,7 +19,7 @@ public class DisparoComIntensidade : MonoBehaviour
     }
     void Update()
     {
-        if (!shoot)
+        if (!shoot && disparo!=null && transfDisp!=null && spawn!=null)
         {
             this.transform.position = transfDisp.position;
             this.transform.rotation = transfDisp.rotation;
@@ -36,13 +37,14 @@ public class DisparoComIntensidade : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (shoot)
+        if (shoot && disparo != null && transfDisp != null)
         {
             velAtual -= (Time.deltaTime * desacel);
             velAtual = Mathf.Clamp(velAtual, 0, maxVel);
             rb.velocity = transform.up * velAtual;
             if (velAtual == 0)
             {
+                spawn.Spawn();
                 Destroy(this.gameObject);
             }
         }
@@ -54,5 +56,13 @@ public class DisparoComIntensidade : MonoBehaviour
     public void SetTransfDisp(Transform t)
     {
         transfDisp = t;
+    }
+    public void SetSpawn(SpawnWeapon s)
+    {
+        spawn = s;
+    }
+    public float GetVelAtual()
+    {
+        return velAtual;
     }
 }
