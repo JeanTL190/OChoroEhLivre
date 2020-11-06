@@ -9,14 +9,14 @@ public class SpawnWeapon : MonoBehaviour
     private int quantArmas;
     void Start()
     {
+        quantArmas = weapons.Length;
         Spawn();
     }
 
     // Update is called once per frame
     public void Spawn()
     {
-        quantArmas = weapons.Length;
-        weaponNumb = Random.Range(0, quantArmas - 1);
+        weaponNumb = Random.Range(0, quantArmas);
         weapons[weaponNumb].transform.position = transform.position;
         WeaponDrop wd = Instantiate(weapons[weaponNumb]);
         wd.SetSpawnWeapon(this);
