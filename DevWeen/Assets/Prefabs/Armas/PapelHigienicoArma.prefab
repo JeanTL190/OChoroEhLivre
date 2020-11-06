@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1807415573991300202}
   - component: {fileID: 1807415573991300205}
   - component: {fileID: 1807415573991300200}
+  - component: {fileID: 883132373113652711}
   m_Layer: 0
   m_Name: PapelHigienicoArma
   m_TagString: Untagged
@@ -147,3 +148,18 @@ MonoBehaviour:
   maxVel: 10
   acel: 3
   desacel: 2
+--- !u!114 &883132373113652711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807415573991300198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81a0ebcf8c8aae47ad574a4f3fd266f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 768

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class DamageEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private LayerMask platformLayerMask;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (((1 << collision.gameObject.layer) & platformLayerMask) != 0)
+        {
+            PlayerAtributos aux = collision.GetComponent<PlayerAtributos>();
+            DisparoComIntensidade dci = this.GetComponent<DisparoComIntensidade>();
+            aux.TakeHit();
+            dci.Spawnar();
+            dci.SetSP(true);
+            Destroy(this.gameObject);
+        }
     }
 }

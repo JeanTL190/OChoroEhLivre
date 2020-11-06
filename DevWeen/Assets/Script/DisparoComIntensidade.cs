@@ -13,6 +13,7 @@ public class DisparoComIntensidade : MonoBehaviour
     private float velAtual = 1f;
     private Rigidbody2D rb;
     private bool shoot = false;
+    private bool sp = false;
     private PlayerAtributos pa;
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class DisparoComIntensidade : MonoBehaviour
                 pa.GetComponent<Animator>().SetBool("Segurando", false);
                 rb.velocity = pa.GetComponent<Transform>().up * velAtual;
                 pa.SetWeapon(false);
+                this.GetComponent<Collider2D>().enabled = true;
                 shoot = true;
             }
         }
@@ -51,10 +53,11 @@ public class DisparoComIntensidade : MonoBehaviour
             velAtual -= (Time.deltaTime * desacel);
             velAtual = Mathf.Clamp(velAtual, 0, maxVel);
             rb.velocity = rb.velocity.normalized * velAtual;
-            if (velAtual == 0)
+            if (velAtual == 0 && !sp)
             {
+                sp = true;
                 spawn.Spawn();
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
             }
         }
     }
@@ -77,5 +80,13 @@ public class DisparoComIntensidade : MonoBehaviour
     public void SetPlayerAtributos(PlayerAtributos p)
     {
         pa = p;
+    }
+    public void Spawnar()
+    {
+        spawn.Spawn();
+    }
+    public void SetSP(bool s)
+    {
+        sp = s;
     }
 }

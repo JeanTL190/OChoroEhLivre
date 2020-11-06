@@ -27,6 +27,7 @@ public class WeaponDrop : MonoBehaviour
                     aux.GetComponent<Animator>().SetBool("Atirando", false);
                 }
                 DisparoComIntensidade aux2 = Instantiate(getArma);
+                aux2.GetComponent<Collider2D>().enabled = false;
                 aux2.SetDisparo(aux.GetDisparo());
                 aux2.SetTransfDisp(aux.GetTransfDisp());
                 aux2.SetSpawn(spawn);
