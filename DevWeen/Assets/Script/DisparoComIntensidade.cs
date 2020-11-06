@@ -27,10 +27,14 @@ public class DisparoComIntensidade : MonoBehaviour
             {
                 velAtual += (Time.deltaTime * acel);
                 velAtual = Mathf.Clamp(velAtual, 0, maxVel);
+                pa.GetComponent<Animator>().SetBool("ComWeapon", false);
+                pa.GetComponent<Animator>().SetBool("Segurando", true);
             }
             else if (Input.GetButtonUp(disparo))
             {
+                pa.GetComponent<Animator>().SetTrigger("Atirando");
                 rb.velocity = pa.GetComponent<Transform>().up * velAtual;
+                pa.SetWeapon(false);
                 shoot = true;
             }
         }
@@ -45,7 +49,6 @@ public class DisparoComIntensidade : MonoBehaviour
             if (velAtual == 0)
             {
                 spawn.Spawn();
-                pa.SetWeapon(false);
                 Destroy(this.gameObject);
             }
         }

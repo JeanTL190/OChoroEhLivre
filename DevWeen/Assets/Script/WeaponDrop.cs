@@ -6,6 +6,7 @@ public class WeaponDrop : MonoBehaviour
 {
     [SerializeField] private DisparoComIntensidade getArma;
     [SerializeField] private LayerMask platformLayerMask;
+    [SerializeField] private bool bazooka = false;
     private SpawnWeapon spawn;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +16,14 @@ public class WeaponDrop : MonoBehaviour
             if (!aux.GetWeapon())
             {
                 aux.SetWeapon(true);
+                if (bazooka)
+                {
+                    aux.GetComponent<Animator>().SetBool("bazooka", true);
+                }
+                else
+                {
+                    aux.GetComponent<Animator>().SetTrigger("ComWeapon");
+                }
                 DisparoComIntensidade aux2 = Instantiate(getArma);
                 aux2.SetDisparo(aux.GetDisparo());
                 aux2.SetTransfDisp(aux.GetTransfDisp());

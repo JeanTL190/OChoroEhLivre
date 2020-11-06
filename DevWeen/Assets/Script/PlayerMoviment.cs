@@ -55,11 +55,7 @@ public class PlayerMoviment : MonoBehaviour
                 posicaoAtual = new Vector2(-1, 0);
             }
         }
-        animacao.SetFloat("Horizontal", movement.x);
-        animacao.SetFloat("Vertical", movement.y);
         animacao.SetFloat("Speed", movement.sqrMagnitude);
-        animacao.SetFloat("PosiHorizontal", posicaoAtual.x);
-        animacao.SetFloat("PosiVertical", posicaoAtual.y);
     }
     private void FixedUpdate()
     {
