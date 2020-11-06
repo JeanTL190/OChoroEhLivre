@@ -12,7 +12,8 @@ public class DamageEnemy : MonoBehaviour
             PlayerAtributos aux = collision.GetComponent<PlayerAtributos>();
             DisparoComIntensidade dci = this.GetComponent<DisparoComIntensidade>();
             aux.TakeHit();
-            dci.Spawnar();
+            if(dci.GetVelAtual()>0)
+                dci.Spawnar();
             dci.SetSP(true);
             Destroy(this.gameObject);
         }
