@@ -37,7 +37,7 @@ public class MenuFunctions : MonoBehaviour
         paused = false;
     }
 
-    void Pause()
+    public void Pause()
     {
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(true);
