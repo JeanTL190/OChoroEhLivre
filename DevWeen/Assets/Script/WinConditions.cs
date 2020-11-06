@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class WinConditions : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private PlayerAtributos[] players;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
