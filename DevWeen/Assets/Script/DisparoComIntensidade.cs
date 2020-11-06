@@ -13,6 +13,7 @@ public class DisparoComIntensidade : MonoBehaviour
     private float velAtual = 1f;
     private Rigidbody2D rb;
     private bool shoot = false;
+    private PlayerAtributos pa;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +35,7 @@ public class DisparoComIntensidade : MonoBehaviour
                 shoot = true;
             }
         }
+        Debug.Log(spawn == null);
     }
     private void FixedUpdate()
     {
@@ -45,7 +47,7 @@ public class DisparoComIntensidade : MonoBehaviour
             if (velAtual == 0)
             {
                 spawn.Spawn();
-                Destroy(this.gameObject);
+                pa.SetWeapon(false);
             }
         }
     }
@@ -64,5 +66,9 @@ public class DisparoComIntensidade : MonoBehaviour
     public float GetVelAtual()
     {
         return velAtual;
+    }
+    public void SetPlayerAtributos(PlayerAtributos p)
+    {
+        pa = p;
     }
 }

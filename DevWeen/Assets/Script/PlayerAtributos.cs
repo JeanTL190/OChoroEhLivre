@@ -8,6 +8,7 @@ public class PlayerAtributos : MonoBehaviour
     [SerializeField] private PlayerAtributos enemy;
     [SerializeField] private Transform transfDisp;
     private int points=0;
+    private bool weapon = false;
 
     public int GetPoints()
     {
@@ -28,5 +29,13 @@ public class PlayerAtributos : MonoBehaviour
     public void TakeHit()
     {
         enemy.MorePoint();
+    }
+    public void SetWeapon(bool w)
+    {
+        weapon = w;
+    }
+    public bool GetWeapon()
+    {
+        return weapon;
     }
 }

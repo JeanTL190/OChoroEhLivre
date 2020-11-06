@@ -5,26 +5,27 @@ using UnityEngine;
 public class WeaponDrop : MonoBehaviour
 {
     [SerializeField] private DisparoComIntensidade getArma;
-    [SerializeField] private string namePosiArma;
     [SerializeField] private LayerMask platformLayerMask;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private SpawnWeapon spawn;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(((1 << collision.gameObject.layer) & platformLayerMask)!= 0)
         {
             PlayerAtributos aux = collision.GetComponent<PlayerAtributos>();
-            getArma.SetDisparo(aux.GetDisparo());
-            getArma.SetTransfDisp(aux.GetTransfDisp());
-            Instantiate(getArma);
+            if (!aux.GetWeapon())
+            {
+                aux.SetWeapon(true);
+                DisparoComIntensidade aux2 = Instantiate(getArma);
+                aux2.SetDisparo(aux.GetDisparo());
+                aux2.SetTransfDisp(aux.GetTransfDisp());
+                aux2.SetSpawn(spawn);
+                aux2.SetPlayerAtributos(aux);
+                Destroy(this.gameObject);
+            }
         }
+    }
+    public void SetSpawnWeapon(SpawnWeapon sw)
+    {
+        spawn = sw;
     }
 }

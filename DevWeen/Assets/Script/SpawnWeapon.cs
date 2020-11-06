@@ -18,6 +18,7 @@ public class SpawnWeapon : MonoBehaviour
         quantArmas = weapons.Length;
         weaponNumb = Random.Range(0, quantArmas - 1);
         weapons[weaponNumb].transform.position = transform.position;
-        Instantiate(weapons[weaponNumb]);
+        WeaponDrop wd = Instantiate(weapons[weaponNumb]);
+        wd.SetSpawnWeapon(this);
     }
 }
