@@ -22,7 +22,9 @@ public class WeaponDrop : MonoBehaviour
                 }
                 else
                 {
-                    aux.GetComponent<Animator>().SetTrigger("ComWeapon");
+                    aux.GetComponent<Animator>().SetBool("ComWeapon",true);
+                    aux.GetComponent<Animator>().SetBool("Segurando",false);
+                    aux.GetComponent<Animator>().SetBool("Atirando", false);
                 }
                 DisparoComIntensidade aux2 = Instantiate(getArma);
                 aux2.SetDisparo(aux.GetDisparo());

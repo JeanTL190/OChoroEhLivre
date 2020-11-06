@@ -23,16 +23,21 @@ public class DisparoComIntensidade : MonoBehaviour
         if (!shoot && disparo!=null && transfDisp!=null && spawn!=null)
         {
             this.transform.position = transfDisp.position;
+            this.transform.rotation = transfDisp.rotation;
+            this.transform.Rotate(0, 0, -90);
             if (Input.GetAxisRaw(disparo) > 0)
             {
                 velAtual += (Time.deltaTime * acel);
                 velAtual = Mathf.Clamp(velAtual, 0, maxVel);
                 pa.GetComponent<Animator>().SetBool("ComWeapon", false);
                 pa.GetComponent<Animator>().SetBool("Segurando", true);
+                pa.GetComponent<Animator>().SetBool("Atirando", false);
             }
             else if (Input.GetButtonUp(disparo))
             {
-                pa.GetComponent<Animator>().SetTrigger("Atirando");
+                pa.GetComponent<Animator>().SetBool("Atirando",true);
+                pa.GetComponent<Animator>().SetBool("ComWeapon", false);
+                pa.GetComponent<Animator>().SetBool("Segurando", false);
                 rb.velocity = pa.GetComponent<Transform>().up * velAtual;
                 pa.SetWeapon(false);
                 shoot = true;
