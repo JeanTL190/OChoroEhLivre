@@ -23,7 +23,6 @@ public class DisparoComIntensidade : MonoBehaviour
         if (!shoot && disparo!=null && transfDisp!=null && spawn!=null)
         {
             this.transform.position = transfDisp.position;
-            this.transform.rotation = transfDisp.rotation;
             if (Input.GetAxisRaw(disparo) > 0)
             {
                 velAtual += (Time.deltaTime * acel);
@@ -31,11 +30,10 @@ public class DisparoComIntensidade : MonoBehaviour
             }
             else if (Input.GetButtonUp(disparo))
             {
-                rb.velocity = transform.up * velAtual;
+                rb.velocity = pa.GetComponent<Transform>().up * velAtual;
                 shoot = true;
             }
         }
-        Debug.Log(spawn == null);
     }
     private void FixedUpdate()
     {
@@ -43,11 +41,12 @@ public class DisparoComIntensidade : MonoBehaviour
         {
             velAtual -= (Time.deltaTime * desacel);
             velAtual = Mathf.Clamp(velAtual, 0, maxVel);
-            rb.velocity = transform.up * velAtual;
+            rb.velocity = rb.velocity.normalized * velAtual;
             if (velAtual == 0)
             {
                 spawn.Spawn();
                 pa.SetWeapon(false);
+                Destroy(this.gameObject);
             }
         }
     }

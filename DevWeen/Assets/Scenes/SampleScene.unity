@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 63435260}
   m_Layer: 8
-  m_Name: TransfDisp
+  m_Name: TransfDisp2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,7 +232,7 @@ Animator:
   m_GameObject: {fileID: 292316835}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 38ea28c3ff587d7459ba0d8e343f8f74, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -373,7 +373,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0045288205, y: 0.0042490624}
+  m_Offset: {x: 0.0045288205, y: -0.01769244}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disparo: Disparo1
-  enemy: {fileID: 0}
+  enemy: {fileID: 1483191820}
   transfDisp: {fileID: 1669644355}
 --- !u!1 &519420028
 GameObject:
@@ -663,8 +663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849f8e77187eca04f86bd5b82dfb86c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disparo: Disparo1
-  enemy: {fileID: 0}
+  disparo: Disparo2
+  enemy: {fileID: 292316844}
   transfDisp: {fileID: 63435260}
 --- !u!114 &1483191821
 MonoBehaviour:
@@ -695,7 +695,7 @@ MonoBehaviour:
   vel: 5
   inptHorizontal: Horizontal2
   inptVertical: Vertical2
-  maxDist: {x: 0.5, y: 4.5}
+  maxDist: {x: -0.5, y: 4.5}
   minDist: {x: -8.4, y: -4.5}
   animacao: {fileID: 0}
 --- !u!61 &1483191823
@@ -711,18 +711,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0045288205, y: 0.0042490624}
+  m_Offset: {x: 0.0045288205, y: 0.030623965}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.62, y: 0.34}
+    oldSize: {x: 0.62, y: 0.39}
     newSize: {x: 0.72, y: 0.43}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61094236, y: 0.16995603}
+  m_Size: {x: 0.61094236, y: 0.17523097}
   m_EdgeRadius: 0
 --- !u!58 &1483191824
 CircleCollider2D:
@@ -820,7 +820,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f313079af6d0d0146b97551f4dd8bd68, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 155533df5dda6734c8c17b016c19e74e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 1
@@ -838,14 +838,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483191819}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -4.45, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 0}
   m_Children:
   - {fileID: 63435260}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1669644354
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,7 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1669644355}
   m_Layer: 8
-  m_Name: TransfDisp
+  m_Name: TransfDisp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
