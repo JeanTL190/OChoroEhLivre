@@ -240,8 +240,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
-  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -351,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &51799245
 RectTransform:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &75785031
 RectTransform:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 111471091}
   - component: {fileID: 111471090}
   m_Layer: 5
-  m_Name: ImageRIP
+  m_Name: ImageRIP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1132,7 +1132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &192585808
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2080,7 +2080,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 743132079}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2137,7 +2137,7 @@ GameObject:
   - component: {fileID: 686579983}
   - component: {fileID: 686579982}
   m_Layer: 5
-  m_Name: ImageRIP (1)
+  m_Name: ImageRIP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2155,7 +2155,7 @@ RectTransform:
   m_LocalScale: {x: 0.9997762, y: 0.9997762, z: 0.9997762}
   m_Children: []
   m_Father: {fileID: 743132079}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2287,7 +2287,7 @@ GameObject:
   - component: {fileID: 739536265}
   - component: {fileID: 739536264}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Text (TMP)3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2443,9 +2443,9 @@ RectTransform:
   - {fileID: 1495252577}
   - {fileID: 1687460537}
   - {fileID: 111471089}
+  - {fileID: 686579981}
   - {fileID: 657788525}
   - {fileID: 1975882024}
-  - {fileID: 686579981}
   m_Father: {fileID: 1805141645}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3003,7 +3003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &932457087
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4696,7 +4696,7 @@ GameObject:
   - component: {fileID: 1716437074}
   - component: {fileID: 1716437073}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP)1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4741,7 +4741,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Giovane Carvalho Silv\xE9rio as Game Designer"
+  m_text: Giovane Carvalho Silverio as Game Designer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3771ea8045cef9a49a5f8b8e6eef0ef0, type: 2}
   m_sharedMaterial: {fileID: 3595493422980007030, guid: 3771ea8045cef9a49a5f8b8e6eef0ef0, type: 2}
@@ -4830,7 +4830,7 @@ GameObject:
   - component: {fileID: 1748369504}
   - component: {fileID: 1748369503}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Text (TMP)2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5494,7 +5494,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 30891c46190c74747b5c2c4405e071c5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5713,7 +5713,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 743132079}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5827,8 +5827,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
-  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6000,30 +6000,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - audioSource: {fileID: 0}
-    name: Theme
-    audio: {fileID: 8300000, guid: 30891c46190c74747b5c2c4405e071c5, type: 3}
-    volume: 1
-    pitch: 3
+    name: ToiletPaper
+    audio: {fileID: 8300000, guid: 34a413d4de99bcc40a2b32eeda1fc86d, type: 3}
+    volume: 0.5
+    pitch: 1
   - audioSource: {fileID: 0}
-    name: 
-    audio: {fileID: 0}
-    volume: 0
-    pitch: 0
+    name: Egg
+    audio: {fileID: 8300000, guid: 65d07837a08665241836eafb32d2f41e, type: 3}
+    volume: 0.5
+    pitch: 1
   - audioSource: {fileID: 0}
-    name: 
-    audio: {fileID: 0}
-    volume: 0
-    pitch: 0
-  - audioSource: {fileID: 0}
-    name: 
-    audio: {fileID: 0}
-    volume: 0
-    pitch: 0
-  - audioSource: {fileID: 0}
-    name: 
-    audio: {fileID: 0}
-    volume: 0
-    pitch: 0
+    name: Pumpkin
+    audio: {fileID: 8300000, guid: ce1b3c630874bed4f93f133b5072d432, type: 3}
+    volume: 0.5
+    pitch: 1
 --- !u!4 &2074924624
 Transform:
   m_ObjectHideFlags: 0
@@ -6055,7 +6045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2082571296
 RectTransform:
   m_ObjectHideFlags: 0
