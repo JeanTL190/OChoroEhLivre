@@ -73,10 +73,6 @@ public class DisparoComIntensidade : MonoBehaviour
     {
         spawn = s;
     }
-    public float GetVelAtual()
-    {
-        return velAtual;
-    }
     public void SetPlayerAtributos(PlayerAtributos p)
     {
         pa = p;
@@ -88,5 +84,17 @@ public class DisparoComIntensidade : MonoBehaviour
     public void SetSP(bool s)
     {
         sp = s;
+    }
+    public float GetVelAtual()
+    {
+        return velAtual;
+    }
+    public bool GetShoot()
+    {
+        return shoot;
+    }
+    public bool GetSP()
+    {
+        return sp;
     }
 }
