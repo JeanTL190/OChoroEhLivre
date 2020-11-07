@@ -39,6 +39,7 @@ public class DisparoComIntensidade : MonoBehaviour
                 pa.GetComponent<Animator>().SetBool("Atirando",true);
                 pa.GetComponent<Animator>().SetBool("ComWeapon", false);
                 pa.GetComponent<Animator>().SetBool("Segurando", false);
+                pa.GetComponent<Animator>().SetBool("Bazooka",false);
                 rb.velocity = pa.GetComponent<Transform>().up * velAtual;
                 pa.SetWeapon(false);
                 this.GetComponent<Collider2D>().enabled = true;

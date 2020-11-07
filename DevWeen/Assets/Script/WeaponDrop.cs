@@ -18,7 +18,7 @@ public class WeaponDrop : MonoBehaviour
                 aux.SetWeapon(true);
                 if (bazooka)
                 {
-                    aux.GetComponent<Animator>().SetBool("bazooka", true);
+                    aux.GetComponent<Animator>().SetBool("Bazooka", true);
                 }
                 else
                 {
