@@ -38,4 +38,8 @@ public class PlayerAtributos : MonoBehaviour
     {
         return weapon;
     }
+    public void ResetPoints()
+    {
+        points = 0;
+    }
 }

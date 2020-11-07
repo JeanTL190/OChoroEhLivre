@@ -20,6 +20,8 @@ public class WinConditions : MonoBehaviour
         comecou = true;
         player[0].GetComponent<Transform>().position = vetor[0];
         player[1].GetComponent<Transform>().position = vetor[1];
+        player[0].ResetPoints();
+        player[1].ResetPoints();
     }
 
     public void NotComecou()

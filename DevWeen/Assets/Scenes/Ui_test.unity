@@ -2055,7 +2055,9 @@ MonoBehaviour:
   - {fileID: 1798288257}
   - {fileID: 1481174150}
   um: {fileID: 1177271824}
-  vetor1: []
+  vetor:
+  - {x: 4.45, y: 0, z: 0}
+  - {x: -4.45, y: 0, z: 0}
 --- !u!4 &587521500
 Transform:
   m_ObjectHideFlags: 0
@@ -4108,7 +4110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481174149}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -4.443, y: -0.021, z: 0}
+  m_LocalPosition: {x: -4.45, y: -0.021, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 0}
   m_Children:
   - {fileID: 94344710}
