@@ -185,6 +185,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 4797167279423447393, guid: f4d0c521ea3f88c47bda5c7d2516deaa, type: 3}
   - {fileID: 2215098477358602774, guid: 0843406b32745374ea4a3aa499fa50a8, type: 3}
+  - {fileID: 4169034104220375177, guid: ba1e36d1169fe3546ac691680acd55a5, type: 3}
 --- !u!4 &145485612
 Transform:
   m_ObjectHideFlags: 0
@@ -765,6 +766,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 4797167279423447393, guid: f4d0c521ea3f88c47bda5c7d2516deaa, type: 3}
   - {fileID: 2215098477358602774, guid: 0843406b32745374ea4a3aa499fa50a8, type: 3}
+  - {fileID: 4169034104220375177, guid: ba1e36d1169fe3546ac691680acd55a5, type: 3}
 --- !u!1 &1381680930
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,8 +901,8 @@ BoxCollider2D:
   m_Offset: {x: 0.0045288205, y: 0.030623965}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.57689035, y: 0.5646766}
-    oldSize: {x: 0.74, y: 0.47}
+    pivot: {x: 0.5819946, y: 0.61880857}
+    oldSize: {x: 0.74, y: 0.49}
     newSize: {x: 0.72, y: 0.43}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1005,7 +1007,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4f846312a6aed9d4497d7906dddd2477, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75764d9578df8224d92e95527513fb4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 1
