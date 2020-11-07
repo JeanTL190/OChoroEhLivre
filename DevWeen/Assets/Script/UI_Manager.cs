@@ -7,7 +7,7 @@ using DG.Tweening;
 
 public class UI_Manager : MonoBehaviour
 {
-    public RectTransform ui_Gameplay, ui_Menu, ui_Pause, ui_Credit, ui_p1, ui_p2;
+    public RectTransform ui_Gameplay, ui_Menu, ui_Pause, ui_Credit, ui_p1, ui_p2, ui_p3;
 
     private void Awake()
     {
@@ -17,6 +17,7 @@ public class UI_Manager : MonoBehaviour
         ui_Credit.DOAnchorPos(new Vector2(0, 500), 0.01f);
         ui_p1.DOAnchorPos(new Vector2(0, 500), 0.01f);
         ui_p2.DOAnchorPos(new Vector2(0, 500), 0.01f);
+        ui_p3.DOAnchorPos(new Vector2(0, 500), 0.01f);
     }
 
     public void PlayButton()
@@ -68,6 +69,12 @@ public class UI_Manager : MonoBehaviour
         ui_Menu.DOAnchorPos(new Vector2(0, 0), 0.25f);
     }
 
+    public void P3Button()
+    {
+        ui_p3.DOAnchorPos(new Vector2(0, 500), 0.25f);
+        ui_Menu.DOAnchorPos(new Vector2(0, 0), 0.25f);
+    }
+
     public void W1Button()
     {
         ui_Gameplay.DOAnchorPos(new Vector2(0, 500), 0.25f);
@@ -78,6 +85,12 @@ public class UI_Manager : MonoBehaviour
     {
         ui_Gameplay.DOAnchorPos(new Vector2(0, 500), 0.25f);
         ui_p2.DOAnchorPos(new Vector2(0, 0), 0.25f);
+    }
+
+    public void W3Button()
+    {
+        ui_Gameplay.DOAnchorPos(new Vector2(0, 500), 0.25f);
+        ui_p3.DOAnchorPos(new Vector2(0, 0), 0.25f);
     }
 
     // Update is called once per frame

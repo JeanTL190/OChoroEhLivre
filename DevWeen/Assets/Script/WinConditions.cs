@@ -8,17 +8,35 @@ public class WinConditions : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private PlayerAtributos [] player;
     [SerializeField] private UI_Manager um;
-    private bool lost = false;
+    [SerializeField] private Vector3 [] vetor;
+
     private float timeAtual;
-    void Start()
+    private bool comecou = false;
+
+
+    public void TimeReset()
     {
         timeAtual = timeReset;
+        comecou = true;
+        player[0].GetComponent<Transform>().position = vetor[0];
+        player[1].GetComponent<Transform>().position = vetor[1];
+    }
+
+    public void NotComecou()
+    {
+        comecou = false;
+    }
+
+    public void Comecou()
+    {
+        comecou = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!lost)
+        Debug.Log(timeAtual);
+        if (comecou)
         {
             if (timeAtual > 0f)
             {
@@ -27,13 +45,20 @@ public class WinConditions : MonoBehaviour
             }
             else
             {
-                if (player[1].GetPoints() > player[2].GetPoints())
+                if (player[0].GetPoints() > player[1].GetPoints())
                 {
                     um.W1Button();
+                    comecou = false;
+                }
+                else if (player[0].GetPoints() < player[1].GetPoints())
+                {
+                    um.W2Button();
+                    comecou = false;
                 }
                 else
                 {
-                    um.W2Button();
+                    um.W3Button();
+                    comecou = false;
                 }
             }
         }

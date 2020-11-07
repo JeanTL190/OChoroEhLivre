@@ -24,4 +24,8 @@ public class Abobora : MonoBehaviour
             anim.SetTrigger("Explode");
         }
     }
+    public void Destruir()
+    {
+        Destroy(this.gameObject);
+    }
 }
